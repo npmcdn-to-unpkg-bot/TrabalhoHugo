@@ -41,14 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\Carro.cs" />
-    <Compile Include="Entidades\Cliente.cs" />
-    <Compile Include="Entidades\Servico.cs" />
-    <Compile Include="Entidades\TipoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\" />
+    <Folder Include="Entidades\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
