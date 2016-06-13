@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Camada de Apresentacao", "1. Camada de Apresentacao", "{320719E9-E729-4B75-9F50-9D8D2BDD9068}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Camada de Aplicacao", "2. Camada de Aplicacao", "{CCDF2911-DEC7-4919-B829-9D6085FE4FA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Camada de Dominio", "3. Camada de Dominio", "{B3F151BB-57FC-4B4A-8A90-0BDF14B34A9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Camada de Infraestrutura", "4. Camada de Infraestrutura", "{EDB88426-8C5E-49CD-8D9D-53344AF1395C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{AB114F0E-2AD9-40DD-AF02-15FB247450E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Aplicacao", "Si.Dev.Uniplac.TrabalhoSC.Aplicacao\Si.Dev.Uniplac.TrabalhoSC.Aplicacao.csproj", "{300F172A-9917-4C61-9C36-18E7CA450B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Dominio", "Si.Dev.Uniplac.TrabalhoSC.Dominio\Si.Dev.Uniplac.TrabalhoSC.Dominio.csproj", "{2199B67C-740B-4375-9769-1956117E1C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Infra.Dados", "Si.Dev.Uniplac.TrabalhoSC.Infra.Dados\Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.csproj", "{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Testes", "Si.Dev.Uniplac.TrabalhoSC.Testes\Si.Dev.Uniplac.TrabalhoSC.Testes.csproj", "{416A133B-32DF-4D74-BE19-F7235D887D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Apresentacao.Web", "Si.Dev.Uniplac.TrabalhoSC.Apresentacao.Web\Si.Dev.Uniplac.TrabalhoSC.Apresentacao.Web.csproj", "{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Si.Dev.Uniplac.TrabalhoSC.Infra.Framework", "Si.Dev.Uniplac.TrabalhoSC.Infra.Framework\Si.Dev.Uniplac.TrabalhoSC.Infra.Framework.csproj", "{C470B5FD-C346-43AE-B13A-E6C4383E6372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{300F172A-9917-4C61-9C36-18E7CA450B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300F172A-9917-4C61-9C36-18E7CA450B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300F172A-9917-4C61-9C36-18E7CA450B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300F172A-9917-4C61-9C36-18E7CA450B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2199B67C-740B-4375-9769-1956117E1C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2199B67C-740B-4375-9769-1956117E1C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2199B67C-740B-4375-9769-1956117E1C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2199B67C-740B-4375-9769-1956117E1C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416A133B-32DF-4D74-BE19-F7235D887D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416A133B-32DF-4D74-BE19-F7235D887D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416A133B-32DF-4D74-BE19-F7235D887D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416A133B-32DF-4D74-BE19-F7235D887D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C470B5FD-C346-43AE-B13A-E6C4383E6372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C470B5FD-C346-43AE-B13A-E6C4383E6372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C470B5FD-C346-43AE-B13A-E6C4383E6372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C470B5FD-C346-43AE-B13A-E6C4383E6372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{300F172A-9917-4C61-9C36-18E7CA450B80} = {CCDF2911-DEC7-4919-B829-9D6085FE4FA3}
+		{2199B67C-740B-4375-9769-1956117E1C01} = {B3F151BB-57FC-4B4A-8A90-0BDF14B34A9B}
+		{88D2E1FA-A306-4CEA-989F-4C0348F2DEF6} = {EDB88426-8C5E-49CD-8D9D-53344AF1395C}
+		{416A133B-32DF-4D74-BE19-F7235D887D2F} = {AB114F0E-2AD9-40DD-AF02-15FB247450E5}
+		{FFA045E5-C1DB-46B6-9DBE-3044CE5CC1F1} = {320719E9-E729-4B75-9F50-9D8D2BDD9068}
+		{C470B5FD-C346-43AE-B13A-E6C4383E6372} = {EDB88426-8C5E-49CD-8D9D-53344AF1395C}
+	EndGlobalSection
+EndGlobal
