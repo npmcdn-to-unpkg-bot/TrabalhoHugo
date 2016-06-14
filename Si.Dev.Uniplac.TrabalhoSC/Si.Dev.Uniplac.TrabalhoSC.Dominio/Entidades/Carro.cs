@@ -12,9 +12,9 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades
 
         public int Ano { get; set; }
 
-        public int Modelo { get; set; }
+        public string Modelo { get; set; }
 
-        public Carro(string placa, int ano, int modelo)
+        public Carro(string placa, int ano, string modelo)
         {
             this.Placa = placa;
             this.Ano = ano;
