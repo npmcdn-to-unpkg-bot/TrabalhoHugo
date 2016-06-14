@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
