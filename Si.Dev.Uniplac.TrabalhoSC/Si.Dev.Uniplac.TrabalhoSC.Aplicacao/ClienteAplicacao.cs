@@ -1,4 +1,5 @@
-﻿using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
+﻿using Si.Dev.Uniplac.TrabalhoSC.Dominio.Contratos;
+using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +11,60 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Aplicacao
     public class ClienteAplicacao : IClienteAplicacao
     {
 
+        private IClienteRepositorio _clienteRepositorio;
+
+        public ClienteAplicacao(IClienteRepositorio clienteRepositorio)
+        {
+            _clienteRepositorio = clienteRepositorio;
+
+        }
+
+
         public Cliente CriarCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+
+            //Verificar se Cliente já não existe
+
+
+            //Salvar no Banco
+
+            Cliente novoCliente = _clienteRepositorio.Adicionar(cliente);
+
+            //Enviar e-mail de confirmação
+
+
+            return novoCliente;
+
         }
 
-        public void DeletarCliente(Dominio.Entidades.Cliente cliente)
+
+
+
+
+
+        public void DeletarCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            _clienteRepositorio.Deletar(cliente);
         }
 
-        public Dominio.Entidades.Cliente BuscarCliente(int id)
+
+        public Cliente BuscarCliente(int id)
         {
-            throw new NotImplementedException();
+            return _clienteRepositorio.Buscar(id);
         }
 
-        public List<Dominio.Entidades.Cliente> BuscarTodasCliente()
+
+        public List<Cliente> BuscarTodosCliente()
         {
-            throw new NotImplementedException();
+            return _clienteRepositorio.BuscarTodos();
         }
 
-        public Dominio.Entidades.Cliente AtualizarCliente(Dominio.Entidades.Cliente cliente)
+
+        public Cliente AtualizarCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            Cliente clienteAtulizado = _clienteRepositorio.Atualizar(cliente);
+
+            return clienteAtulizado;
         }
     }
 }

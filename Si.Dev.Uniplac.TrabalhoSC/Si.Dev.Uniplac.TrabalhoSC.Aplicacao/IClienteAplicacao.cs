@@ -12,7 +12,7 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Aplicacao
         Cliente CriarCliente(Cliente cliente);
         void DeletarCliente(Cliente cliente);
         Cliente BuscarCliente(int id);
-        List<Cliente> BuscarTodasCliente();
+        List<Cliente> BuscarTodosCliente();
         Cliente AtualizarCliente(Cliente cliente);
     }
 }
