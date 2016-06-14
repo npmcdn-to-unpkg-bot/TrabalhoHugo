@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\IClienteRepositorio.cs" />
     <Compile Include="Entidades\Carro.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Servico.cs" />
@@ -48,7 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contratos\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>

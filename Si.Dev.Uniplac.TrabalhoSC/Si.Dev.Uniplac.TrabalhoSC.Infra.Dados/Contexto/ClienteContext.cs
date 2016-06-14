@@ -15,6 +15,7 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Contexto
         }
 
         public DbSet<Carro> Produtos { get; set; }
-        public DbSet<Servico> Clientes { get; set; }
+        public DbSet<Servico> Servicos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

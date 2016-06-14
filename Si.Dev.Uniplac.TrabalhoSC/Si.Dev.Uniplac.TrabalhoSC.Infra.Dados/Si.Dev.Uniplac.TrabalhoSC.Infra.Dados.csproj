@@ -54,10 +54,9 @@
   <ItemGroup>
     <Compile Include="Contexto\ClienteContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ClienteRepositorio.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Si.Dev.Uniplac.TrabalhoSC.Dominio\Si.Dev.Uniplac.TrabalhoSC.Dominio.csproj">
       <Project>{2199b67c-740b-4375-9769-1956117e1c01}</Project>
