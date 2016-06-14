@@ -320,6 +320,12 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Si.Dev.Uniplac.TrabalhoSC.Dominio\Si.Dev.Uniplac.TrabalhoSC.Dominio.csproj">
+      <Project>{2199b67c-740b-4375-9769-1956117e1c01}</Project>
+      <Name>Si.Dev.Uniplac.TrabalhoSC.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
