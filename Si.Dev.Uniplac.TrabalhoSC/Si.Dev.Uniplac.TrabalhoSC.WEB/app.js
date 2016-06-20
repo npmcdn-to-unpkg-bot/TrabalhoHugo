@@ -1,23 +1,14 @@
 ﻿angular.module("myApp", ['ui.router'])
 
-.controller("ClienteController", function ($http) {
+.controller("ClienteCtrl", function ($http) {
     var self = this;
-    $http.get('http://localhost:51870/api/Cliente/').then(function (response) {
-        self.clientes = response;
+    $http.get("/api/Cliente/").then(function (res) {
+        self.clientes = res;
     });
 })
-.controller("ServicoController", function () {
+.controller("CarroCtrl", function () {
 
 })
-.controller("CarroController", function () {
-
-})
-.service("ClienteService", function () {
-
-})
-.service("ServicoService", function () {
-
-})
-.service("CarroService", function () {
+.controller("ServicoCtrl", function () {
 
 })

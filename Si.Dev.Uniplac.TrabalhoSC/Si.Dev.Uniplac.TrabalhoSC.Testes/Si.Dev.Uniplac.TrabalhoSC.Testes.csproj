@@ -70,7 +70,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Aplicacao\CarroAplicacaoTeste.cs" />
     <Compile Include="Aplicacao\ClienteAplicacaoTeste.cs" />
     <Compile Include="Aplicacao\ServicoAplicacaoTeste.cs" />
     <Compile Include="Base\CriarNovoBancoCarro.cs" />

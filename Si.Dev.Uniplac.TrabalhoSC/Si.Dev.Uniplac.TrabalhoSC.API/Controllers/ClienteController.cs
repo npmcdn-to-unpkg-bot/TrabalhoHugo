@@ -11,7 +11,6 @@ using System.Web.Http.Cors;
 
 namespace Si.Dev.Uniplac.TrabalhoSC.API.Controllers
 {
-    [EnableCors(origins: "http://localhost:51870", headers: "*", methods: "*")]
     public class ClienteController : ApiController
     {
         static readonly IClienteAplicacao repository = new ClienteAplicacao(new ClienteRepositorio());

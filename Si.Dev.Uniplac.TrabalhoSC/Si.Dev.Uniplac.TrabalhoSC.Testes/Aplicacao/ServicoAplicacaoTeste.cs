@@ -4,6 +4,7 @@ using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
 using Si.Dev.Uniplac.TrabalhoSC.Dominio.Contratos;
 using Si.Dev.Uniplac.TrabalhoSC.Aplicacao.ServicoService;
 using Moq;
+using Si.Dev.Uniplac.TrabalhoSC.Aplicacao;
 
 namespace Si.Dev.Uniplac.TrabalhoSC.Testes.Aplicacao
 {
