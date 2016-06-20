@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades
+﻿namespace Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades
 {
     public class Carro
     {
+        public int Id { get; set; }
+
         public string Placa { get; set; }
 
         public int Ano { get; set; }
 
         public string Modelo { get; set; }
 
+        public Carro() { }
+
         public Carro(string placa, int ano, string modelo)
         {
-            this.Placa = placa;
-            this.Ano = ano;
-            this.Modelo = modelo;
+            Placa = placa;
+            Ano = ano;
+            Modelo = modelo;
         }
     }
 }

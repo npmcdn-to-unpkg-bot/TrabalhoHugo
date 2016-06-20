@@ -54,7 +54,9 @@
   <ItemGroup>
     <Compile Include="Contexto\ClienteContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\CarroRepositorio.cs" />
     <Compile Include="Repositorios\ClienteRepositorio.cs" />
+    <Compile Include="Repositorios\ServicoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
