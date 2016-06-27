@@ -75,7 +75,7 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Testes.Data
         public void AtualizaClienteRepositorioTeste()
         {
             // Arrange - Busca no Banco
-            Cliente cliente = _contexto.Clientes.Find(1);
+            Cliente cliente = _contexto.Clientes.Include(c => c.Carro).FirstOrDefault(i => i.Id == 1);;
 
             cliente.Nome = "Bastião";
             cliente.Telefone = 99999999;

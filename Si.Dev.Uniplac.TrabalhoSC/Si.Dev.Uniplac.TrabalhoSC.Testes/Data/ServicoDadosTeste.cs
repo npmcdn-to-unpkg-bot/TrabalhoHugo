@@ -74,8 +74,8 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Testes.Data
         public void AtualizaServicoRepositorioTeste()
         {
             // Arrange - Busca no Banco
-            Servico servico = _contexto.Servicos.Find(1);
-            servico.Cliente = new Cliente("José", 99520611, new Carro("LZR464", 1999, "UNO"));
+            Servico servico = _contexto.Servicos.Include(c => c.Cliente).Include(c => c.Cliente.Carro).FirstOrDefault();
+            servico.Cliente.Nome = "José";
             servico.TipoServico = TipoServico.TrocaDeFluidoFreio;
 
             //Action
