@@ -110,7 +110,6 @@ div.tabs-content-inner {
   -webkit-border-radius: 6px;
 }
 
-
 /* Tutorial Nav Bar */
 
 #tutorial-nav {
@@ -128,11 +127,9 @@ div.tabs-content-inner {
   box-shadow: 4px 4px 6px #48577D;
 }
 
-
 #tutorial-nav li {
   display: inline;
 }
-
 
 #tutorial-nav a:link, #tutorial-nav a:visited {
   font-size: 1.2em;
@@ -143,7 +140,6 @@ div.tabs-content-inner {
   width: 11em;
   padding: 0.2em 0;
 }
-
 
 #tutorial-nav a:hover {
   color: #000;

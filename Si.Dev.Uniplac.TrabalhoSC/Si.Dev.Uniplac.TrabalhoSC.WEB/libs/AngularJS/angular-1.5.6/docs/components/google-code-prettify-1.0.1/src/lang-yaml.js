@@ -11,7 +11,7 @@ PR['registerLangHandler'](
   PR['createSimpleLexer'](
     [
       [PR['PR_PUNCTUATION'], /^[:|>?]+/, null, ':|>?'],
-      [PR['PR_DECLARATION'],  /^%(?:YAML|TAG)[^#\r\n]+/, null, '%'],
+      [PR['PR_DECLARATION'], /^%(?:YAML|TAG)[^#\r\n]+/, null, '%'],
       [PR['PR_TYPE'], /^[&]\S+/, null, '&'],
       [PR['PR_TYPE'], /^!\S*/, null, '!'],
       [PR['PR_STRING'], /^"(?:[^\\"]|\\.)*(?:"|$)/, null, '"'],

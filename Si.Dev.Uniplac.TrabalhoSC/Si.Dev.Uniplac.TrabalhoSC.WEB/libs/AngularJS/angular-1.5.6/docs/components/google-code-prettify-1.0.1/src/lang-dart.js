@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-
 /**
  * @fileoverview
  * Registers a language handler Dart.
@@ -71,7 +69,7 @@ PR['registerLangHandler'](
 
       // Identifiers.
       [PR['PR_PLAIN'], /^[a-z_$][a-z0-9_]*/i],
-      
+
       // Operators.
       [PR['PR_PUNCTUATION'], /^[~!%^&*+=|?:<>/-]/],
 

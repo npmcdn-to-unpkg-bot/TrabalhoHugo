@@ -3,6 +3,7 @@ using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
 using Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Contexto;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 
 namespace Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Repositorios
 {
@@ -24,8 +25,14 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Repositorios
 
         public Cliente Atualizar(Cliente cliente)
         {
-            var entry = _contexto.Entry<Cliente>(cliente);
-            entry.State = System.Data.Entity.EntityState.Modified;
+
+            var dbCliente = _contexto.Clientes
+                       .Include(x => x.Carro)
+                       .Single(c => c.Id == cliente.Id);
+
+            _contexto.Entry(dbCliente).CurrentValues.SetValues(cliente);
+            _contexto.Entry(dbCliente.Carro).CurrentValues.SetValues(cliente.Carro);
+
             _contexto.SaveChanges();
 
             return cliente;
@@ -33,12 +40,14 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Repositorios
 
         public Cliente Buscar(int id)
         {
-            return _contexto.Clientes.Find(id);
+            return _contexto.Clientes.Include(c => c.Carro).FirstOrDefault(i => i.Id == id);
         }
 
         public List<Cliente> BuscarTodos()
         {
-            return _contexto.Clientes.ToList();
+            return _contexto.Clientes
+                .Include(c => c.Carro)
+                .ToList();
         }
 
         public void Deletar(Cliente cliente)

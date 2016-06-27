@@ -5,7 +5,7 @@ namespace Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Contexto
 {
     public class ClienteContext : DbContext
     {
-        public ClienteContext() : base("ClienteDB")
+        public ClienteContext() : base("OficinaDB")
         {
         }
 

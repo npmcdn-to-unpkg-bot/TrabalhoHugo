@@ -1,15 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Example - example-datetimelocal-input-directive-jquery</title>
-  
 
   <script src="../../components/jquery-undefined/jquery.js"></script>
   <script src="../../../angular.js"></script>
-  
-
-  
 </head>
 <body ng-app="dateExample">
   <script>
@@ -30,11 +26,11 @@
     <span class="error" ng-show="myForm.input.$error.datetimelocal">
         Not a valid date!</span>
   </div>
-  <tt>value = {{example.value | date: "yyyy-MM-ddTHH:mm:ss"}}</tt><br/>
-  <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-  <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
-  <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
-  <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+  <tt>value = {{example.value | date: "yyyy-MM-ddTHH:mm:ss"}}</tt><br />
+  <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br />
+  <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br />
+  <tt>myForm.$valid = {{myForm.$valid}}</tt><br />
+  <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br />
 </form>
 </body>
 </html>

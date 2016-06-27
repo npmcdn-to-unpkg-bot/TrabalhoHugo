@@ -24,7 +24,7 @@ PR['registerLangHandler'](
     PR['createSimpleLexer'](
         [
          // whitespace
-         [PR['PR_PLAIN'],   /^[\t\n\r \xA0]+/, null, '\t\n\r \xA0'],
+         [PR['PR_PLAIN'], /^[\t\n\r \xA0]+/, null, '\t\n\r \xA0'],
          // all comments begin with '%'
          [PR['PR_COMMENT'], /^%[^\r\n]*/, null, '%']
         ],
@@ -36,7 +36,7 @@ PR['registerLangHandler'](
          // or contains only one character
          [PR['PR_KEYWORD'], /^\\./],
          // Highlight dollar for math mode and ampersam for tabular
-         [PR['PR_TYPE'],    /^[$&]/],
+         [PR['PR_TYPE'], /^[$&]/],
          // numeric measurement values with attached units
          [PR['PR_LITERAL'],
           /[+-]?(?:\.\d+|\d+(?:\.\d*)?)(cm|em|ex|in|pc|pt|bp|mm)/i],

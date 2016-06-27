@@ -1,0 +1,70 @@
+﻿<div ng-controller="ServicoCtrl as ctrl" class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="align__item__middle">Id</th>
+                <th class="align__item__middle">Cliente</th>
+                <th class="align__item__middle">Carro</th>
+                <th class="align__item__middle">Tipo de Serviço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in ctrl.servicos">
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">{{item.Id}}</span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.Id" /></span>
+                </td>
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">{{item.Cliente.Nome}}</span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.Cliente.Nome" /></span>
+                </td>
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">{{item.Cliente.Carro.Placa}}</span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.Cliente.Carro.Placa" /></span>
+                </td>
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">
+                        <span ng-if="item.TipoServico == 0">Revisão</span>
+                        <span ng-if="item.TipoServico == 1">Troca de Óleo</span>
+                        <span ng-if="item.TipoServico == 2">Troca de Velas</span>
+                        <span ng-if="item.TipoServico == 3">Troca de Correa</span>
+                        <span ng-if="item.TipoServico == 4">Troca de Fluido do Freio</span>
+                        <span ng-if="item.TipoServico == 5">Troca de Rolamento da Embreagem</span>
+                    </span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.TipoServico" /></span>
+                </td>
+                <td ng-if="!ctrl.toggleEdit" class="col-xs-2 align__item__end">
+                    <button type="button" class="btn btn-success" ng-click="ctrl.cloneItem(item); ctrl.toggleEdit = !ctrl.toggleEdit">Editar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.delete(item)">Excluir</button>
+                </td>
+                <td ng-if="ctrl.toggleEdit" class="col-xs-2 align__item__end">
+                    <button type="button" class="btn btn-success" ng-click="ctrl.edit(item); ctrl.toggleEdit = !ctrl.toggleEdit">Salvar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.cancel($index); ctrl.toggleEdit = !ctrl.toggleEdit">Cancelar</button>
+                </td>
+            </tr>
+            <tr ng-if="ctrl.toggleAdd">
+                <td class="col-xs-2 align__item__middle"></td>
+                <td class="col-xs-2 align__item__middle">
+                    <select ng-options="cliente as cliente.Nome for cliente in ctrl.clientes track by cliente.Id" ng-model="ctrl.newItem.Cliente"></select>
+                </td>
+                <td></td>
+                <td class="col-xs-2 align__item__middle">
+                    <select ng-model="ctrl.newItem.TipoServico">
+                        <option value="0">Revisão</option>
+                        <option value="1">Troca de Óleo</option>
+                        <option value="2">Troca de Velas</option>
+                        <option value="3">Troca de Correa</option>
+                        <option value="4">Troca de Fluido do Freio</option>
+                        <option value="5">Troca de Rolamento da Embreagem</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success" ng-click="ctrl.add(ctrl.newItem); ctrl.toggleAdd = !ctrl.toggleAdd">Salvar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.toggleAdd = !ctrl.toggleAdd">Cancelar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary btn-add" ng-click="ctrl.toggleAdd = !ctrl.toggleAdd">Adicionar</button>
+
+</div>

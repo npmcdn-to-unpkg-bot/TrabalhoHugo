@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-
 /**
  * @fileoverview
  * Registers a language handler for CSS.
@@ -70,8 +68,8 @@
 
 // The current loop now looks like
 
-//    1. use js-modules/combinePrefixPatterns.js to 
-//       combine all regular expressions into one 
+//    1. use js-modules/combinePrefixPatterns.js to
+//       combine all regular expressions into one
 //    2. use a single global regular expresion match to extract all tokens
 //    3. for each token try regular expressions in order until one matches it
 //       and classify it using the associated style
@@ -100,8 +98,6 @@
 
 // All other patterns are fall-through patterns.
 
-
-
 // The comments inline below refer to productions in the CSS specification's
 // lexical grammar.  See link above.
 PR['registerLangHandler'](
@@ -109,7 +105,7 @@ PR['registerLangHandler'](
         // Shortcut patterns.
         [
          // The space production <s>
-         [PR['PR_PLAIN'],       /^[ \t\r\n\f]+/, null, ' \t\r\n\f']
+         [PR['PR_PLAIN'], /^[ \t\r\n\f]+/, null, ' \t\r\n\f']
         ],
         // Fall-through patterns.
         [

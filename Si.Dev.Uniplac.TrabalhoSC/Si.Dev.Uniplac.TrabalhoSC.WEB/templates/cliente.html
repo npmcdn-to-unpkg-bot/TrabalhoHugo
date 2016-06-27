@@ -1,0 +1,47 @@
+﻿<<div ng-controller="ClienteCtrl as ctrl" class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="align__item__middle">Id</th>
+                <th class="align__item__middle">Cliente</th>
+                <th class="align__item__middle">Carro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in ctrl.clientes">
+                <td class="col-xs-2 align__item__middle">
+                    <span>{{item.Id}}</span>
+                </td>
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">{{item.Nome}}</span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.Nome" /></span>
+                </td>
+                <td class="col-xs-2 align__item__middle">
+                    <span ng-if="!ctrl.toggleEdit">{{item.Carro.Placa}}</span>
+                    <span ng-if="ctrl.toggleEdit"><input type="text" ng-model="item.Carro.Placa" /></span>
+                </td>      
+                <td ng-if="!ctrl.toggleEdit" class="col-xs-2 align__item__end">
+                    <button type="button" class="btn btn-success" ng-click="ctrl.cloneItem(item); ctrl.toggleEdit = !ctrl.toggleEdit">Editar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.delete(item)">Excluir</button>
+                </td>
+                <td ng-if="ctrl.toggleEdit" class="col-xs-2 align__item__end">
+                    <button type="button" class="btn btn-success" ng-click="ctrl.edit(item); ctrl.toggleEdit = !ctrl.toggleEdit">Salvar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.cancel($index); ctrl.toggleEdit = !ctrl.toggleEdit">Cancelar</button>
+                </td>
+            </tr>
+            <tr ng-if="ctrl.toggleAdd">
+                <td class="col-xs-2 align__item__middle"></td>
+                <td class="col-xs-2 align__item__middle">
+                    <input type="text" ng-model="ctrl.newItem.Nome"/>
+                </td>
+                <td><select ng-options="carro as carro.Placa for carro in ctrl.carros track by carro.Id" ng-model="ctrl.newItem.Carro"></select></td>
+                <td>
+                    <button type="button" class="btn btn-success" ng-click="ctrl.add(ctrl.newItem); ctrl.toggleAdd = !ctrl.toggleAdd">Salvar</button>
+                    <button type="button" class="btn btn-danger" ng-click="ctrl.toggleAdd = !ctrl.toggleAdd">Cancelar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary btn-add" ng-click="ctrl.toggleAdd = !ctrl.toggleAdd">Adicionar</button>
+
+</div>

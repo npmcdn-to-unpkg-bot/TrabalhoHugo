@@ -1,15 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Example - example-custom-interpolation-markup-jquery</title>
-  
 
   <script src="../../components/jquery-undefined/jquery.js"></script>
   <script src="../../../angular.js"></script>
-  
-
-  
 </head>
 <body ng-app="customInterpolationApp">
   <script>
@@ -19,7 +15,6 @@
     $interpolateProvider.startSymbol('//');
     $interpolateProvider.endSymbol('//');
   });
-
 
   customInterpolationApp.controller('DemoController', function() {
       this.label = "This binding is brought you by // interpolation symbols.";

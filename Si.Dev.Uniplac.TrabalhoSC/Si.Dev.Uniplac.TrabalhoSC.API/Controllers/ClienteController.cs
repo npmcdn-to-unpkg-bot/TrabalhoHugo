@@ -3,17 +3,15 @@ using Si.Dev.Uniplac.TrabalhoSC.Dominio.Entidades;
 using Si.Dev.Uniplac.TrabalhoSC.Infra.Dados.Repositorios;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace Si.Dev.Uniplac.TrabalhoSC.API.Controllers
 {
     public class ClienteController : ApiController
     {
-        static readonly IClienteAplicacao repository = new ClienteAplicacao(new ClienteRepositorio());
+        private static readonly IClienteAplicacao repository = new ClienteAplicacao(new ClienteRepositorio());
 
         [HttpGet]
         public IEnumerable<Cliente> Get()
@@ -53,9 +51,9 @@ namespace Si.Dev.Uniplac.TrabalhoSC.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        public HttpResponseMessage Delete(Cliente _cliente)
+        public HttpResponseMessage Delete(int id)
         {
-            Cliente cliente = repository.BuscarCliente(_cliente.Id);
+            Cliente cliente = repository.BuscarCliente(id);
             if (cliente == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
